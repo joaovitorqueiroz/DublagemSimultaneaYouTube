@@ -1,0 +1,28 @@
+{
+    "name":"Extensão Dublagem YouTube",
+    "manifest_version":2,
+    "description": "Realiza a dublagem da legenda do video do youtube",
+    "version": "1.0",
+    "permissions": [
+        "unlimited_storage",
+        "notifications",
+        "contextMenus",
+        "cookies",
+        "storage",
+        "idle",
+        "tabs",
+        "activeTab"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.youtube.com/*"],
+            "js": [
+                "js/jquery-3.3.1.min.js",
+                "js/chrome.js"
+            ],
+            "run_ay": "document_end",
+            "persistent": false
+        }
+    ]
+}
